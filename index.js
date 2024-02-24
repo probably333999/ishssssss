@@ -5,7 +5,7 @@ const bot = new Telegraf('6895852282:AAEKSv96V4-oJg7BKnnTTOJMKibTXdq6sZI');
 const targetBotId = '5306177516'; // Replace with the desired target bot's ID
 const jobRequests = {};
 
-bot.start((ctx) => ctx.reply("Salom! Mening ish yuklash botiga xush kelibsiz. Boshlash uchun sharh qoldirib, yuklamoqchi bo'lgan aniq ishni ko'rsating. Agar ma'lumotlaringiz faylda saqlangan bo'lsa, buni yuborishingiz mumkin. Qo'shimcha ma'lumot uchun "/help" tugmasini bosing."));
+bot.start((ctx) => ctx.reply("Salom! Mening ish yuklash botiga xush kelibsiz. Boshlash uchun sharh qoldirib, yuklamoqchi bo'lgan aniq ishni ko'rsating. Agar ma'lumotlaringiz faylda saqlangan bo'lsa, buni yuborishingiz mumkin. Qo'shimcha ma'lumot uchun /help tugmasini bosing."));
 
 // Function to generate formatted text for job request
 function formatJobRequest(jobRequest) {
