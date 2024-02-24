@@ -5,7 +5,7 @@ const bot = new Telegraf('6895852282:AAEKSv96V4-oJg7BKnnTTOJMKibTXdq6sZI');
 const targetBotId = '5306177516'; // Replace with the desired target bot's ID
 const jobRequests = {};
 
-bot.start((ctx) => ctx.reply("Salom! Mening ish yuklash botiga xush kelibsiz. Boshlash uchun sharh qoldirib, yuklamoqchi bo'lgan aniq ishni ko'rsating. Agar ma'lumotlaringiz faylda saqlangan bo'lsa, buni yuborishingiz mumkin. Qo'shimcha ma'lumot uchun /help tugmasini bosing."));
+bot.start((ctx) => ctx.reply("Salom! Mening ish yuklash botiga xush kelibsiz. Boshlash uchun yuklamoqchi bo'lgan aniq ishni ko'rsating. Agar ma'lumotlaringiz faylda saqlangan bo'lsa, uni yuborishingiz mumkin. Qo'shimcha ma'lumot uchun /help tugmasini bosing."));
 
 // Function to generate formatted text for job request
 function formatJobRequest(jobRequest) {
@@ -15,7 +15,7 @@ function formatJobRequest(jobRequest) {
 }
 bot.command('help', (ctx) => {
     ctx.reply("Ish so'rovi botiga xush kelibsiz!\n\n" +
-              "Siz menga bunday ish haqida ma'lumot yuborishingiz mumkin.\n" +
+              "Siz menga bunday ish haqida ma'lumot yuborishingiz kerak.\n" +
               '- Talablar.\n' +
               '- Kompaniya.\n' +
               '- Ish turi.\n' +
@@ -110,7 +110,7 @@ bot.action('confirm', async (ctx) => {
     await bot.telegram.forwardMessage(targetBotId, ctx.chat.id, userRequest.messageId, userId);
     
     // Notify user
-    ctx.reply("Sizning ish so'rovingiz qabul qilindi. Rahmat!");
+    ctx.reply("Sizning ish so'rovingiz qabul qilindi. Rahmat! Agar kamchiliklar bo'lsa biz siz bilan bog'lanamiz");
 
     // Cleanup
     delete jobRequests[userId];
